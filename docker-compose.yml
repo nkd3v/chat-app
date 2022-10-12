@@ -4,16 +4,12 @@ services:
     image: snappy-app
     ports:
       - "3000:3000"
-    volumes:
-      - ./public:/app
     networks:
       - snappy-network
   snappy-api:
     image: snappy-api
     ports:
       - "5000:5000"
-    volumes:
-      - ./server:/app
     networks:
       - snappy-network
     depends_on:

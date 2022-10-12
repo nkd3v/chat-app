@@ -30,7 +30,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "https://snappy.ml",
+    origin: "https://app.snappy.ml",
     credentials: true,
   },
 });

@@ -1,0 +1,30 @@
+version: "3"
+services:
+  snappy-app:
+    image: snappy-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./public:/app
+    networks:
+      - snappy-network
+  snappy-api:
+    image: snappy-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server:/app
+    networks:
+      - snappy-network
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - snappy-network
+
+networks:
+  snappy-network: 
+    driver: bridge

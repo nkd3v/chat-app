@@ -1,13 +1,13 @@
 version: "3"
 services:
   snappy-app:
-    image: snappy-app
+    build: public/
     ports:
       - "80:3000"
     networks:
       - snappy-network
   snappy-api:
-    image: snappy-api
+    build: server/
     ports:
       - "5000:5000"
     networks:

@@ -1,4 +1,4 @@
-export const host = "https://api.snappy.ml";
+export const host = "https://api.snappy.pp.ua";
 export const loginRoute = `${host}/api/auth/login`;
 export const registerRoute = `${host}/api/auth/register`;
 export const logoutRoute = `${host}/api/auth/logout`;
